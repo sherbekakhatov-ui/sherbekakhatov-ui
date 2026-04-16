@@ -20,13 +20,13 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://miraki-garden.uz'),
   title: {
     default: 'Miraki Gardens – Shahrisabz dam olish maskani',
-    template: '%s | Miraki Garden',
+    template: '%s | Miraki Gardens',
   },
-  description: "Miraki Garden – Shahrisabzda joylashgan zamonaviy dam olish maskani. Tabiat qo'ynida dam oling.",
+  description: "Miraki Gardens – Shahrisabzda joylashgan zamonaviy dam olish maskani. Tabiat qo'ynida dam oling.",
   keywords: 'Shahrisabz dam olish maskani, Miraki Garden, Shahrisabz hotel, отдых в Шахрисабзе, resort in Shahrisabz',
   authors: [{ name: 'Miraki Gardens' }],
-  creator: 'Miraki Garden',
-  publisher: 'Miraki Garden',
+  creator: 'Miraki Gardens',
+  publisher: 'Miraki Gardens',
   robots: {
     index: true,
     follow: true,
@@ -51,9 +51,9 @@ export const metadata: Metadata = {
     locale: 'uz_UZ',
     alternateLocale: ['ru_RU', 'en_US'],
     url: 'https://miraki-garden.uz',
-    siteName: 'Miraki Garden',
-    title: 'Miraki Garden – Shahrisabz dam olish maskani',
-    description: "Miraki Garden – Shahrisabzda joylashgan zamonaviy dam olish maskani. Tabiat qo'ynida dam oling.",
+    siteName: 'Miraki Gardens',
+    title: 'Miraki Gardens – Shahrisabz dam olish maskani',
+    description: "Miraki Gardens – Shahrisabzda joylashgan zamonaviy dam olish maskani. Tabiat qo'ynida dam oling.",
     images: [
       {
         url: '/images/og-image.jpg',
