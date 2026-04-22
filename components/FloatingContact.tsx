@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 const WHATSAPP_NUMBER = '998887150709'
 const WHATSAPP_MESSAGE = "Salom, Miraki Gardens haqida ma'lumot olmoqchiman"
-const TELEGRAM_USERNAME = 'mirakigarden' // ⚠️ o'z username'ingizni yozing
+const TELEGRAM_USERNAME = 'Uzexagro' // ⚠️ o'z username'ingizni yozing
 
 export default function FloatingContact() {
   const [hovered, setHovered] = useState<'whatsapp' | 'telegram' | null>(null)
