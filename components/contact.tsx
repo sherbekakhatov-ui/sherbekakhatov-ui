@@ -101,50 +101,47 @@ export function Contact() {
             </div>
           </div>
 
-          {/* Yandex Maps */}
+          {/* Yandex Maps bosiladigan blok */}
           <div className={cn(
             'transition-all duration-1000 delay-300',
             isInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
           )}>
-            <div className="relative rounded-sm overflow-hidden shadow-lg" style={{ aspectRatio: '4/3' }}>
-              <iframe
-                src="https://yandex.uz/map-widget/v1/?ll=67.078617%2C39.019220&mode=search&sll=67.079361%2C39.026111&text=39.026111%2C67.079361&z=14.53"
-                width="100%"
-                height="100%"
-                frameBorder={0}
-                allowFullScreen
-                loading="lazy"
-                style={{ display: 'block', position: 'absolute', inset: 0 }}
-                title="Miraki Gardens — Shahrisabz xaritasi"
-              />
+            <a
+              href="https://yandex.uz/maps/?ll=67.079361%2C39.026111&z=16&pt=67.079361,39.026111,pm2rdm"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative flex items-center justify-center rounded-sm overflow-hidden shadow-lg bg-[#d8d8cf] border border-[#d4af37]/40 hover:shadow-xl transition-all duration-300 group"
+              style={{ aspectRatio: '4/3' }}
+            >
+              <div className="absolute inset-4 border border-[#d4af37]/30" />
 
-              {/* Butun xarita bosiladigan link */}
-              <a
-                href="https://yandex.uz/maps/?ll=67.079361%2C39.026111&z=16&pt=67.079361,39.026111,pm2rdm"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Yandex xaritada ochish"
-                className="absolute inset-0 z-10"
-              />
+              <div className="text-center z-10 px-6">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[#1a3328]/10 flex items-center justify-center group-hover:bg-[#1a3328] transition-colors duration-300">
+                  <MapPin className="w-8 h-8 text-[#1a3328] group-hover:text-[#d4af37] transition-colors duration-300" />
+                </div>
 
-              {/* Yo'nalish tugmasi */}
-              <a
-                href="https://yandex.uz/maps/-/CPG45Eo-"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute bottom-4 right-4 z-20 flex items-center gap-2 px-4 py-2.5 text-sm font-medium tracking-wide transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl"
-                style={{
-                  background: '#1a3328',
-                  color: '#f5f0e8',
-                  borderRadius: '2px',
-                  fontFamily: 'var(--font-montserrat)',
-                  boxShadow: '0 4px 16px rgba(0,0,0,0.3)',
-                }}
-              >
-                <MapPin className="w-4 h-4" />
-                Yo'nalish olish
-              </a>
-            </div>
+                <h3 className="text-[#1a3328] text-xl font-medium mb-2">
+                  Miraki Garden
+                </h3>
+
+                <p className="text-[#1a3328]/60 text-sm mb-5">
+                  Shahrisabz, Uzbekistan
+                </p>
+
+                <span
+                  className="inline-flex items-center gap-2 px-5 py-3 text-sm font-medium tracking-wide"
+                  style={{
+                    background: '#1a3328',
+                    color: '#f5f0e8',
+                    borderRadius: '2px',
+                    fontFamily: 'var(--font-montserrat)',
+                  }}
+                >
+                  <MapPin className="w-4 h-4" />
+                  Yandex xaritada ochish
+                </span>
+              </div>
+            </a>
 
             {/* Qo'shimcha info */}
             <div className="flex flex-wrap gap-5 mt-4 text-sm text-[#1a3328]/50">
