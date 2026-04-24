@@ -57,16 +57,19 @@ export function Contact() {
                 </div>
               </div>
 
-              {/* Phone */}
+              {/* Phone — bosilsa call ochiladi */}
               <div className="flex items-start gap-6 group">
                 <div className="w-14 h-14 rounded-full bg-[#1a3328]/5 flex items-center justify-center flex-shrink-0 group-hover:bg-[#1a3328] transition-colors duration-300">
                   <Phone className="w-6 h-6 text-[#1a3328] group-hover:text-[#d4af37] transition-colors duration-300" />
                 </div>
                 <div>
                   <h3 className="text-[#1a3328] font-medium text-lg mb-2">Phone</h3>
-                  <p className="text-[#1a3328]/60">
+                  <a
+                    href="tel:+998887150709"
+                    className="text-[#1a3328]/60 hover:text-[#1a3328] transition-colors duration-300"
+                  >
                     {t.contact.phone}
-                  </p>
+                  </a>
                 </div>
               </div>
 
@@ -96,25 +99,52 @@ export function Contact() {
             </div>
           </div>
 
-          {/* Map Placeholder */}
+          {/* ✅ Yandex Maps */}
           <div className={cn(
             'transition-all duration-1000 delay-300',
             isInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
           )}>
-            <div className="relative aspect-[4/3] bg-[#1a3328]/5 rounded-sm overflow-hidden">
-              {/* Map Image Placeholder */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#1a3328]/10 to-[#1a3328]/20" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="w-12 h-12 text-[#1a3328]/30 mx-auto mb-4" />
-                  <p className="text-[#1a3328]/50 font-[family-name:var(--font-montserrat)] text-sm tracking-wider">
-                    Shahrisabz, Uzbekistan
-                  </p>
-                </div>
-              </div>
-              
-              {/* Decorative Border */}
-              <div className="absolute inset-4 border border-[#d4af37]/20 rounded-sm" />
+            <div className="relative rounded-sm overflow-hidden shadow-lg" style={{ aspectRatio: '4/3' }}>
+              <iframe
+                src="https://yandex.uz/map-widget/v1/?ll=67.078617%2C39.019220&mode=search&sll=67.079361%2C39.026111&text=39.026111%2C67.079361&z=14.53"
+                width="100%"
+                height="100%"
+                frameBorder={0}
+                allowFullScreen
+                loading="lazy"
+                style={{ display: 'block', position: 'absolute', inset: 0 }}
+                title="Miraki Gardens — Shahrisabz xaritasi"
+              />
+
+              {/* Yo'nalish tugmasi */}
+              <a
+                href="https://yandex.uz/maps/-/CPG45Eo-"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute bottom-4 right-4 z-10 flex items-center gap-2 px-4 py-2.5 text-sm font-medium tracking-wide transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl"
+                style={{
+                  background: '#1a3328',
+                  color: '#f5f0e8',
+                  borderRadius: '2px',
+                  fontFamily: 'var(--font-montserrat)',
+                  boxShadow: '0 4px 16px rgba(0,0,0,0.3)',
+                }}
+              >
+                <MapPin className="w-4 h-4" />
+                Yo'nalish olish
+              </a>
+            </div>
+
+            {/* Qo'shimcha info */}
+            <div className="flex flex-wrap gap-5 mt-4 text-sm text-[#1a3328]/50">
+              <span className="flex items-center gap-1.5">
+                <MapPin className="w-3.5 h-3.5" />
+                Uloch MFY, Shahrisabz
+              </span>
+              <span className="flex items-center gap-1.5">
+                <Phone className="w-3.5 h-3.5" />
+                Shahrisabzdan ~15 daqiqa
+              </span>
             </div>
           </div>
         </div>
