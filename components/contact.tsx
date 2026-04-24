@@ -13,7 +13,6 @@ export function Contact() {
   return (
     <section id="contact" className="py-24 md:py-32 bg-[#f5f0e8] relative overflow-hidden">
       <div ref={ref} className="container mx-auto px-6">
-        {/* Section Header */}
         <div className="text-center mb-20">
           <span className={cn(
             'inline-block text-[#d4af37] text-xs tracking-[0.3em] uppercase font-[family-name:var(--font-montserrat)] font-medium mb-4 transition-all duration-700',
@@ -40,13 +39,11 @@ export function Contact() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-          {/* Contact Info */}
           <div className={cn(
             'transition-all duration-1000',
             isInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
           )}>
             <div className="space-y-8">
-              {/* Address */}
               <div className="flex items-start gap-6 group">
                 <div className="w-14 h-14 rounded-full bg-[#1a3328]/5 flex items-center justify-center flex-shrink-0 group-hover:bg-[#1a3328] transition-colors duration-300">
                   <MapPin className="w-6 h-6 text-[#1a3328] group-hover:text-[#d4af37] transition-colors duration-300" />
@@ -59,7 +56,6 @@ export function Contact() {
                 </div>
               </div>
 
-              {/* Phone */}
               <div className="flex items-start gap-6 group">
                 <div className="w-14 h-14 rounded-full bg-[#1a3328]/5 flex items-center justify-center flex-shrink-0 group-hover:bg-[#1a3328] transition-colors duration-300">
                   <Phone className="w-6 h-6 text-[#1a3328] group-hover:text-[#d4af37] transition-colors duration-300" />
@@ -75,7 +71,6 @@ export function Contact() {
                 </div>
               </div>
 
-              {/* Email */}
               <div className="flex items-start gap-6 group">
                 <div className="w-14 h-14 rounded-full bg-[#1a3328]/5 flex items-center justify-center flex-shrink-0 group-hover:bg-[#1a3328] transition-colors duration-300">
                   <Mail className="w-6 h-6 text-[#1a3328] group-hover:text-[#d4af37] transition-colors duration-300" />
@@ -89,7 +84,6 @@ export function Contact() {
               </div>
             </div>
 
-            {/* CTA */}
             <div className="mt-12">
               <Link
                 href="#booking"
@@ -101,49 +95,55 @@ export function Contact() {
             </div>
           </div>
 
-          {/* Yandex Maps bosiladigan blok */}
           <div className={cn(
             'transition-all duration-1000 delay-300',
             isInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
           )}>
-            <a
-              href="https://yandex.uz/maps/?ll=67.079361%2C39.026111&z=16&pt=67.079361,39.026111,pm2rdm"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative flex items-center justify-center rounded-sm overflow-hidden shadow-lg bg-[#d8d8cf] border border-[#d4af37]/40 hover:shadow-xl transition-all duration-300 group"
+            <div
+              className="relative rounded-sm overflow-hidden shadow-lg bg-[#d8d8cf] border border-[#d4af37]/40"
               style={{ aspectRatio: '4/3' }}
             >
-              <div className="absolute inset-4 border border-[#d4af37]/30" />
+              <a
+                href="https://yandex.uz/maps/?ll=67.079361%2C39.026111&z=16&pt=67.079361,39.026111,pm2rdm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute inset-0 flex items-center justify-center group"
+              >
+                <div className="absolute inset-4 border border-[#d4af37]/30" />
 
-              <div className="text-center z-10 px-6">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[#1a3328]/10 flex items-center justify-center group-hover:bg-[#1a3328] transition-colors duration-300">
-                  <MapPin className="w-8 h-8 text-[#1a3328] group-hover:text-[#d4af37] transition-colors duration-300" />
+                <div className="text-center z-10 px-6">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[#1a3328]/10 flex items-center justify-center group-hover:bg-[#1a3328] transition-colors duration-300">
+                    <MapPin className="w-8 h-8 text-[#1a3328] group-hover:text-[#d4af37] transition-colors duration-300" />
+                  </div>
+
+                  <h3 className="text-[#1a3328] text-xl font-medium mb-2">
+                    Miraki Garden
+                  </h3>
+
+                  <p className="text-[#1a3328]/60 text-sm mb-5">
+                    Shahrisabz, Uzbekistan
+                  </p>
                 </div>
+              </a>
 
-                <h3 className="text-[#1a3328] text-xl font-medium mb-2">
-                  Miraki Garden
-                </h3>
+              <a
+                href="https://yandex.uz/maps/?rtext=~39.026111%2C67.079361&rtt=auto&z=15"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute bottom-4 right-4 z-20 flex items-center gap-2 px-5 py-3 text-sm font-medium tracking-wide transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl"
+                style={{
+                  background: '#1a3328',
+                  color: '#f5f0e8',
+                  borderRadius: '2px',
+                  fontFamily: 'var(--font-montserrat)',
+                  boxShadow: '0 4px 16px rgba(0,0,0,0.3)',
+                }}
+              >
+                <MapPin className="w-4 h-4" />
+                Marshrut
+              </a>
+            </div>
 
-                <p className="text-[#1a3328]/60 text-sm mb-5">
-                  Shahrisabz, Uzbekistan
-                </p>
-
-                <span
-                  className="inline-flex items-center gap-2 px-5 py-3 text-sm font-medium tracking-wide"
-                  style={{
-                    background: '#1a3328',
-                    color: '#f5f0e8',
-                    borderRadius: '2px',
-                    fontFamily: 'var(--font-montserrat)',
-                  }}
-                >
-                  <MapPin className="w-4 h-4" />
-                  Yandex xaritada ochish
-                </span>
-              </div>
-            </a>
-
-            {/* Qo'shimcha info */}
             <div className="flex flex-wrap gap-5 mt-4 text-sm text-[#1a3328]/50">
               <span className="flex items-center gap-1.5">
                 <MapPin className="w-3.5 h-3.5" />
