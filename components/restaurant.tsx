@@ -3,7 +3,15 @@
 import { useLanguage } from '@/lib/language-context';
 import { useInView } from '@/hooks/use-in-view';
 import { cn } from '@/lib/utils';
-import { Mountain, Leaf, Wine, Sparkles } from 'lucide-react';
+import {
+  Mountain,
+  Leaf,
+  Wine,
+  Sparkles,
+  Users,
+  CalendarCheck,
+  Phone,
+} from 'lucide-react';
 import Link from 'next/link';
 
 const features = [
@@ -18,72 +26,126 @@ export function Restaurant() {
   const { ref, isInView } = useInView({ threshold: 0.1 });
 
   return (
-    <section id="restaurant" className="py-24 md:py-32 bg-[#f5f0e8] relative overflow-hidden">
-      <div ref={ref} className="container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+    <section
+      id="restaurant"
+      className="py-16 sm:py-20 md:py-28 lg:py-32 bg-[#f5f0e8] relative overflow-hidden"
+    >
+      <div className="absolute top-0 right-0 w-[360px] h-[360px] bg-[#d4af37]/10 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3 pointer-events-none" />
+
+      <div ref={ref} className="container mx-auto px-4 sm:px-6 relative">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
           {/* Image Side */}
-          <div className={cn(
-            'relative transition-all duration-1000',
-            isInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
-          )}>
-            {/* Main Image */}
-            <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
+          <div
+            className={cn(
+              'relative transition-all duration-1000',
+              isInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
+            )}
+          >
+            <div className="relative aspect-[4/5] sm:aspect-[5/4] lg:aspect-[4/5] overflow-hidden rounded-3xl shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1600&auto=format&fit=crop"
                 alt="Miraki Garden Restaurant"
+                loading="lazy"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1a3328]/40 to-transparent" />
+
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1a3328]/65 via-[#1a3328]/10 to-transparent" />
+
+              {/* Mobile image label */}
+              <div className="absolute left-5 right-5 bottom-5 sm:hidden">
+                <div className="rounded-2xl bg-[#1a3328]/90 backdrop-blur-md border border-white/10 p-5">
+                  <div className="flex items-center gap-3">
+                    <Users className="w-5 h-5 text-[#d4af37]" />
+                    <div>
+                      <p className="text-[#d4af37] text-2xl font-semibold">120</p>
+                      <p className="text-[#f5f0e8]/75 text-xs uppercase tracking-[0.2em]">
+                        o‘rinli restoran
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            {/* Floating Card */}
-            <div className="absolute -bottom-8 -right-8 lg:-right-12 bg-[#1a3328] p-8 rounded-sm shadow-2xl max-w-xs">
-              <div className="text-[#d4af37] text-5xl font-light mb-2">120</div>
-              <div className="text-[#f5f0e8]/70 text-sm font-[family-name:var(--font-montserrat)] tracking-wider uppercase">
-                Seats Available
+            {/* Floating Card - desktop/tablet */}
+            <div className="hidden sm:block absolute -bottom-8 right-4 lg:-right-10 bg-[#1a3328] p-7 lg:p-8 rounded-3xl shadow-2xl max-w-xs border border-white/10">
+              <div className="flex items-center gap-4">
+                <Users className="w-8 h-8 text-[#d4af37]" />
+                <div>
+                  <div className="text-[#d4af37] text-4xl lg:text-5xl font-light leading-none">
+                    120
+                  </div>
+                  <div className="text-[#f5f0e8]/70 text-xs lg:text-sm font-[family-name:var(--font-montserrat)] tracking-wider uppercase mt-2">
+                    o‘rinli restoran
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* Decorative Frame */}
-            <div className="absolute -top-6 -left-6 w-full h-full border border-[#d4af37]/30 rounded-sm -z-10" />
+            <div className="hidden sm:block absolute -top-5 -left-5 w-full h-full border border-[#d4af37]/30 rounded-3xl -z-10" />
           </div>
 
           {/* Content Side */}
-          <div className={cn(
-            'transition-all duration-1000 delay-300',
-            isInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
-          )}>
-            <span className="inline-block text-[#d4af37] text-xs tracking-[0.3em] uppercase font-[family-name:var(--font-montserrat)] font-medium mb-4">
+          <div
+            className={cn(
+              'transition-all duration-1000 delay-300',
+              isInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
+            )}
+          >
+            <span className="inline-block text-[#d4af37] text-[11px] sm:text-xs tracking-[0.25em] sm:tracking-[0.3em] uppercase font-[family-name:var(--font-montserrat)] font-medium mb-4">
               {t.restaurant.subtitle}
             </span>
-            <h2 className="text-4xl md:text-5xl text-[#1a3328] font-medium mb-6">
+
+            <h2 className="text-3xl sm:text-4xl md:text-5xl text-[#1a3328] font-medium mb-5 sm:mb-6 leading-tight">
               {t.restaurant.title}
             </h2>
-            <div className="flex items-center gap-4 mb-8">
-              <div className="w-16 h-px bg-[#d4af37]" />
+
+            <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+              <div className="w-12 sm:w-16 h-px bg-[#d4af37]" />
               <div className="w-2 h-2 rotate-45 border border-[#d4af37]" />
             </div>
-            <p className="text-[#1a3328]/70 text-lg leading-relaxed mb-10">
+
+            <p className="text-[#1a3328]/70 text-base sm:text-lg leading-relaxed mb-8 sm:mb-10">
               {t.restaurant.description}
             </p>
 
+            {/* Highlight Cards */}
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-8">
+              <div className="rounded-2xl bg-white/55 border border-[#1a3328]/10 p-4">
+                <CalendarCheck className="w-5 h-5 text-[#d4af37] mb-3" />
+                <p className="text-[#1a3328] text-sm font-medium">
+                  Tadbir va banketlar
+                </p>
+              </div>
+
+              <div className="rounded-2xl bg-white/55 border border-[#1a3328]/10 p-4">
+                <Leaf className="w-5 h-5 text-[#d4af37] mb-3" />
+                <p className="text-[#1a3328] text-sm font-medium">
+                  Bog‘dan dasturxonga
+                </p>
+              </div>
+            </div>
+
             {/* Features */}
-            <div className="grid grid-cols-2 gap-6 mb-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 mb-9 sm:mb-10">
               {features.map((feature, index) => {
                 const Icon = feature.icon;
+
                 return (
                   <div
                     key={feature.key}
                     className={cn(
-                      'flex items-center gap-4 transition-all duration-500',
+                      'flex items-center gap-4 rounded-2xl bg-[#1a3328]/5 p-4 transition-all duration-500',
                       isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                     )}
                     style={{ transitionDelay: `${600 + index * 100}ms` }}
                   >
-                    <div className="w-12 h-12 rounded-full bg-[#1a3328]/5 flex items-center justify-center">
-                      <Icon className="w-5 h-5 text-[#1a3328]" />
+                    <div className="w-11 h-11 rounded-full bg-[#1a3328] flex items-center justify-center shrink-0">
+                      <Icon className="w-5 h-5 text-[#d4af37]" />
                     </div>
-                    <span className="text-[#1a3328] text-sm font-[family-name:var(--font-montserrat)] tracking-wider">
+
+                    <span className="text-[#1a3328] text-sm font-[family-name:var(--font-montserrat)] tracking-wider leading-snug">
                       {t.restaurant.features[feature.key]}
                     </span>
                   </div>
@@ -92,12 +154,22 @@ export function Restaurant() {
             </div>
 
             {/* CTA */}
-            <Link
-              href="#booking"
-              className="inline-block px-10 py-4 bg-[#1a3328] text-[#f5f0e8] text-sm tracking-[0.2em] uppercase font-[family-name:var(--font-montserrat)] font-medium hover:bg-[#2a4338] transition-all duration-300"
-            >
-              {t.restaurant.cta}
-            </Link>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <Link
+                href="#booking"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-[#1a3328] text-[#f5f0e8] text-sm tracking-[0.16em] uppercase font-[family-name:var(--font-montserrat)] font-semibold hover:bg-[#2a4338] transition-all duration-300"
+              >
+                {t.restaurant.cta}
+              </Link>
+
+              <a
+                href="tel:+998887150709"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-[#1a3328]/20 text-[#1a3328] text-sm tracking-[0.16em] uppercase font-[family-name:var(--font-montserrat)] font-semibold hover:bg-[#1a3328]/5 transition-all duration-300"
+              >
+                <Phone className="w-4 h-4" />
+                Call
+              </a>
+            </div>
           </div>
         </div>
       </div>
