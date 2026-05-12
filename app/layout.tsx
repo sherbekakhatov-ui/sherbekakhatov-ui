@@ -140,7 +140,7 @@ const jsonLd = {
       description:
         "Shahrisabzda hashamatli tog' bog' dam olish maskani. 500 gektar lavanda dalalari, uzumzorlar va tabiatda noyob xonalar.",
       url: 'https://miraki-garden.uz',
-      telephone: '+998887150709',
+      telephone: '+998554058888',
       email: 'info@mirakigarden.com',
       address: {
         '@type': 'PostalAddress',
@@ -184,7 +184,7 @@ const jsonLd = {
       name: 'Miraki Gardens Restaurant',
       description: "Bog'dan dasturxonga — 120 o'rinli restoran, panoramik tog' manzaralari.",
       url: 'https://miraki-garden.uz/#restaurant',
-      telephone: '+998887150709',
+      telephone: '+998554058888',
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Shahrisabz',

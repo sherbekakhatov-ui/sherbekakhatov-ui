@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-const WHATSAPP_NUMBER = '998887150709'
+const WHATSAPP_NUMBER = '998554058888'
 const WHATSAPP_MESSAGE = "Salom, Miraki Gardens haqida ma'lumot olmoqchiman"
 const TELEGRAM_USERNAME = 'Uzexagro' // ⚠️ o'z username'ingizni yozing
 

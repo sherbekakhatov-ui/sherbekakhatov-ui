@@ -64,7 +64,7 @@ export function Hero() {
           </Link>
 
           <a
-            href="tel:+998887150709"
+            href="tel:+998554058888"
             className="w-full sm:hidden px-8 py-4 rounded-full border border-[#f5f0e8]/30 text-[#f5f0e8] text-sm tracking-[0.18em] uppercase font-[family-name:var(--font-montserrat)] font-semibold flex items-center justify-center gap-2 hover:bg-[#f5f0e8]/10 transition-all duration-300"
           >
             <Phone className="w-4 h-4" />
