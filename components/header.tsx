@@ -132,7 +132,6 @@ export function Header() {
                 href="?be-booking-open=true"
                 onClick={(e) => {
                   e.preventDefault();
-                  closeMobileMenu();
                   window.location.href = '?be-booking-open=true';
                 }}
               className="booking-link px-6 py-3 bg-[#d4af37] text-[#1a3328] text-sm tracking-widest uppercase font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#c9a430] transition-colors duration-300"
