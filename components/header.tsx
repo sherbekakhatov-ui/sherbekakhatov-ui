@@ -65,7 +65,7 @@ export function Header() {
           {/* Logo */}
           <Link href="#home" onClick={closeMobileMenu} className="relative z-50">
             <h1 className="text-xl sm:text-2xl md:text-3xl font-medium tracking-wide text-[#f5f0e8]">
-              Miraki Garden
+              Miraki Gardens
             </h1>
           </Link>
 
@@ -145,7 +145,7 @@ export function Header() {
             <a
               href="tel:+998XXXXXXXXX"
               className="w-10 h-10 rounded-full bg-white/10 border border-white/15 flex items-center justify-center text-[#f5f0e8] active:scale-95 transition"
-              aria-label="Call Miraki Garden"
+              aria-label="Call Miraki Gardens"
             >
               <Phone className="w-5 h-5" />
             </a>
