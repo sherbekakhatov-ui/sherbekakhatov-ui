@@ -63,7 +63,7 @@ export function Contact() {
                 <div>
                   <h3 className="text-[#1a3328] font-medium text-lg mb-2">Phone</h3>
                   <a
-                    href="tel:+998873378888"
+                    href={`tel:${t.contact.phone.replace(/\s/g, '')}`}
                     className="text-[#1a3328]/60 hover:text-[#1a3328] transition-colors duration-300"
                   >
                     {t.contact.phone}
@@ -117,7 +117,7 @@ export function Contact() {
                   </div>
 
                   <h3 className="text-[#1a3328] text-xl font-medium mb-2">
-                    Miraki Garden
+                    Miraki Gardens
                   </h3>
 
                   <p className="text-[#1a3328]/60 text-sm mb-5">
